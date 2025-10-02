@@ -8,14 +8,20 @@ Tiny desktop sprite for Wayland/Hyprland. **One sprite per workspace**, spawns w
 ```bash
 git clone https://github.com/deadkennedyx/HyprSprite.git
 cd HyprSprite
+Place your own sprites on frames/ or keep the default ones.
 chmod +x install.sh
 ./install.sh
 cd ..
 rm -rf HyprSprite
 
-### Update
-git clone https://github.com/<you>/HyprSprite.git && cd HyprSprite && ./install.sh
+To merge frames: ./install.sh --merge-frames
 
-### Uninstall (keeps your frames)
+To overwrite frames: ./install.sh --force-frames
+
+### Update
+
+git clone https://github.com/deadkennedyx/HyprSprite.git && cd HyprSprite && ./install.sh
+
+### Uninstall (keeps your frames in ~/.local/share/hyprsprite/frames)
 ./uninstall.sh
 
