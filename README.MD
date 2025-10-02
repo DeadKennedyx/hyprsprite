@@ -24,5 +24,5 @@ git clone https://github.com/deadkennedyx/HyprSprite.git && cd HyprSprite && ./i
 
 ### Uninstall (keeps your frames in ~/.local/share/hyprsprite/frames)
 ./uninstall.sh
-
+![Alt text](assets/gh.png)
 ![Logo](https://raw.githubusercontent.com/DeadKennedyx/hyprsprite/refs/heads/master/assets/gh.png?token=GHSAT0AAAAAADJ4ZSCOEVQFETUWYIS2VYZG2G6XFOQ)
