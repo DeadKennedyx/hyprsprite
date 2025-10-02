@@ -1,5 +1,7 @@
 # HyprSprite (Omarchy/Hyprland)
 
+![sprite](/assets/gh.png)
+
 Tiny desktop sprite for Wayland/Hyprland. **One sprite per workspace**, spawns when you first visit a workspace.  
 - fully **transparent**, **draggable**.
 - Drop your frames (`.png/.webp/.jpg`) in `~/.local/share/hyprsprite/frames`.
@@ -26,4 +28,4 @@ git clone https://github.com/deadkennedyx/HyprSprite.git && cd HyprSprite && ./i
 ### Uninstall (keeps your frames in ~/.local/share/hyprsprite/frames)
 ./uninstall.sh
 
-![sprite](/assets/gh.png)
+
