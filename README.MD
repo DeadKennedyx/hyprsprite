@@ -2,7 +2,7 @@
 
 ![sprite](/assets/gh.png)
 
-Tiny desktop sprite for Wayland/Hyprland. **One sprite per workspace**, spawns when you first visit a workspace.  
+Tiny animated desktop sprite for Wayland/Hyprland. **One sprite per workspace**, spawns when you first visit a workspace.  
 - fully **transparent**, **draggable**.
 
 ### Quick install (Omarchy/Arch)
