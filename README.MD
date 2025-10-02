@@ -1,6 +1,7 @@
 # HyprSprite (Omarchy/Hyprland)
 
 ![sprite](/assets/gh.png)
+![sprite](/assets/gh.gif)
 
 Tiny animated desktop sprite for Wayland/Hyprland. **One sprite per workspace**, spawns when you first visit a workspace.  
 - fully **transparent**, **draggable**.
