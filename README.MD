@@ -16,9 +16,15 @@ cd ..
 rm -rf HyprSprite
 ```
 
-To merge frames: ./install.sh --merge-frames
+To merge frames:
+```bash
+./install.sh --merge-frames
+```
 
-To overwrite frames: ./install.sh --force-frames
+To overwrite frames: 
+```bash
+./install.sh --force-frames
+```
 
 ### Update
 ```bash
