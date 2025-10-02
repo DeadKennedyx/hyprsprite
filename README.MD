@@ -1,6 +1,8 @@
 # HyprSprite (Omarchy/Hyprland)
 
+Example companion that will be around your workspaces:
 ![sprite](/assets/gh.gif)
+you can add any sprite/companion you want!
 
 Tiny animated desktop sprite for Wayland/Hyprland. **One sprite per workspace**, spawns when you first visit a workspace.  
 - fully **transparent**, **draggable**.
