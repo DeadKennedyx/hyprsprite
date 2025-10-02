@@ -4,13 +4,12 @@
 
 Tiny desktop sprite for Wayland/Hyprland. **One sprite per workspace**, spawns when you first visit a workspace.  
 - fully **transparent**, **draggable**.
-- Drop your frames (`.png/.webp/.jpg`) in `~/.local/share/hyprsprite/frames`.
 
 ### Quick install (Omarchy/Arch)
+note: Place your own sprites on frames/ or keep the default ones.
+
 ```bash
-git clone https://github.com/deadkennedyx/HyprSprite.git
 cd HyprSprite
-Place your own sprites on frames/ or keep the default ones.
 chmod +x install.sh
 ./install.sh
 cd ..
