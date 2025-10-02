@@ -29,6 +29,11 @@ To overwrite frames:
 ```bash
 ./install.sh --force-frames
 ```
+Start/Stop the companion:
+```bash
+systemctl --user start hyprsprite-watcher.service
+systemctl --user stop hyprsprite-watcher.service
+```
 
 ### Update
 ```bash
