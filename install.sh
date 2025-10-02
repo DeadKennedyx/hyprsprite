@@ -28,6 +28,41 @@ install -Dm755 "$REPO_DIR/hyprsprite.py" "$APPDIR/hyprsprite.py"
 install -Dm755 "$REPO_DIR/hyprsprite-watcher.py" "$APPDIR/hyprsprite-watcher.py"
 install -Dm755 "$REPO_DIR/hyprsprite-watcher.sh" "$APPDIR/hyprsprite-watcher.sh"
 
+REPO_FRAMES="$REPO_DIR/frames"
+APP_FRAMES="$APPDIR/frames"
+MODE="${1:-auto}"
+shopt -s nullglob
+mapfile -t SRC_FRAMES < <(find "$REPO_FRAMES" -maxdepth 1 -type f \
+  \( -iname '*.png' -o -iname '*.webp' -o -iname '*.jpg' -o -iname '*.jpeg' \) 2>/dev/null)
+
+target_empty() { [[ -z "$(find "$APP_FRAMES" -maxdepth 1 -type f -print -quit 2>/dev/null)" ]]; }
+
+if ((${#SRC_FRAMES[@]})); then
+  case "$MODE" in
+  --force-frames)
+    echo "[HyprSprite] Copying frames (overwrite) from repo → $APP_FRAMES"
+    cp -f "${SRC_FRAMES[@]}" "$APP_FRAMES/"
+    ;;
+  --merge-frames)
+    echo "[HyprSprite] Merging frames (no overwrite) from repo → $APP_FRAMES"
+    for f in "${SRC_FRAMES[@]}"; do
+      b="$(basename "$f")"
+      [[ -e "$APP_FRAMES/$b" ]] || cp "$f" "$APP_FRAMES/"
+    done
+    ;;
+  auto | *)
+    if target_empty; then
+      echo "[HyprSprite] Frames folder empty → copying repo frames to $APP_FRAMES"
+      cp "${SRC_FRAMES[@]}" "$APP_FRAMES/"
+    else
+      echo "[HyprSprite] Frames folder not empty → leaving existing frames untouched."
+      echo "            (Use --merge-frames or --force-frames to change this behavior.)"
+    fi
+    ;;
+  esac
+fi
+shopt -u nullglob
+
 cat >"$HYPRDIR/hyprsprite.conf" <<'EOF'
 # HyprSprite rules
 windowrulev2 = float,     title:^(HyprSprite)$
