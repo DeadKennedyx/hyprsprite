@@ -69,6 +69,7 @@ windowrulev2 = float,     title:^(HyprSprite)$
 windowrulev2 = noblur,    title:^(HyprSprite)$
 windowrulev2 = noborder,  title:^(HyprSprite)$
 windowrulev2 = noanim,    title:^(HyprSprite)$
+windowrulev2 = noshadow,  title:^(HyprSprite)$
 EOF
 
 grep -q 'hyprsprite.conf' "$HYPRMAIN" 2>/dev/null ||
