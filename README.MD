@@ -21,10 +21,12 @@ To merge frames: ./install.sh --merge-frames
 To overwrite frames: ./install.sh --force-frames
 
 ### Update
-
+```bash
 git clone https://github.com/deadkennedyx/HyprSprite.git && cd HyprSprite && ./install.sh
+```
 
 ### Uninstall (keeps your frames in ~/.local/share/hyprsprite/frames)
+```bash
 ./uninstall.sh
-
+```
 
